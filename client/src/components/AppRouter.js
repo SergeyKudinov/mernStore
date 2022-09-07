@@ -8,16 +8,17 @@ const AppRouter = () => {
     const { user } = useContext(Context);
     return (
         <Routes>
-            {user.isAuth && authRoutes.map(({ path, Element }) =>
-                <Route key={path} element={<Element />} />
+            {user.isAuth && authRoutes.map(({ path, Component }) =>
+                <Route path={path} key={path} element={<Component />} />
             )}
-            {publicRoutes.map(({ path, element }) =>
+            {publicRoutes.map(({ path, Component }) =>
                 <Route
+                    path={path}
                     key={path}
-                    element={<Element />}
+                    element={<Component />}
                 />
             )}
-            {<Route path="/*" element={<Navigate to={SHOP_ROUTE} />} />}
+            {/* {<Route path="/*" element={<Navigate to={SHOP_ROUTE} />} />} */}
 
         </Routes>
     );
