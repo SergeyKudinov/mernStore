@@ -23,7 +23,7 @@ const NavBar = observer(() => {
         <Navbar bg="dark" variant="dark">
             <NavLink style={{ color: "white" }} to={SHOP_ROUTE}>КупиДевайс</NavLink>
             {user.isAuth ?
-                <Container>
+                < Container >
                     <Nav
                         className="me-auto"
                         style={{ color: 'white' }}
@@ -58,7 +58,7 @@ const NavBar = observer(() => {
                     </Nav>
                 </Container>
             }
-        </Navbar>
+        </Navbar >
     );
 });
 
